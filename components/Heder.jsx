@@ -43,17 +43,17 @@ const Header = async () => {
                     <SignedIn>
                         <Link
                             href="/dashboard"
-                            className="text-white hover:text-blue-600 flex items-center gap-2"
+                            className="text-black hover:text-blue-600 flex items-center gap-2"
                         >
                             <Button variant="outline">
                                 <LayoutDashboard size={18} />
-                                <span className="hidden md:inline">Dashboard</span>
+                                <span className="hidden md:inline text-black">Dashboard</span>
                             </Button>
                         </Link>
                         <a href="/transaction/create">
-                            <Button className="flex items-center gap-2">
-                                <PenBox size={18} />
-                                <span className="hidden md:inline">Add Transaction</span>
+                            <Button className="flex items-center gap-2 bg-white">
+                                <PenBox size={18} className="text-black" />
+                                <span className="hidden md:inline text-black">Add Transaction</span>
                             </Button>
                         </a>
                     </SignedIn>

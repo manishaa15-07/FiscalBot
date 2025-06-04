@@ -17,7 +17,8 @@ const middleware = clerkMiddleware(async (auth, req) => {
         return redirectToSignIn();
     }
 
-    return NextResponse.next();
+    // return NextResponse.next();
+    return;
 });
 
 // ✅ Export the middleware
