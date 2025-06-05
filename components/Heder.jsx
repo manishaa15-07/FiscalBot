@@ -11,7 +11,7 @@ const Header = async () => {
     // await checkUser();
 
     return (
-        <header className="fixed top-0 w-full bg-black/80 text-white backdrop-blur-md z-50 border-b">
+        <header className="fixed top-0 w-full bg-[#09095D] text-white backdrop-blur-md z-50 border-b">
             <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
                 <Link href="/">
                     <Image
@@ -43,19 +43,30 @@ const Header = async () => {
                     <SignedIn>
                         <Link
                             href="/dashboard"
-                            className="text-black hover:text-blue-600 flex items-center gap-2"
+                            className="text-black hover:text-gray-600 flex items-center gap-2"
                         >
                             <Button variant="outline">
                                 <LayoutDashboard size={18} />
                                 <span className="hidden md:inline text-black">Dashboard</span>
                             </Button>
                         </Link>
-                        <a href="/transaction/create">
+                        {/* <a href="/transaction/create">
                             <Button className="flex items-center gap-2 bg-white">
+                                <PenBox size={18} className="text-black" />
+                                <span className="hidden md:inline text-black ">Add Transaction</span>
+                            </Button>
+                        </a> */}
+
+
+                        <Link
+                            href="/transaction/create"
+                            className="text-black hover:text-gray-600 flex items-center gap-2"
+                        >
+                            <Button variant="outline">
                                 <PenBox size={18} className="text-black" />
                                 <span className="hidden md:inline text-black">Add Transaction</span>
                             </Button>
-                        </a>
+                        </Link>
                     </SignedIn>
                     <SignedOut>
                         <SignInButton forceRedirectUrl="/dashboard">
